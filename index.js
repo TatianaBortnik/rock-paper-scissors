@@ -23,10 +23,12 @@ function getComputerChoice() {
 }
 
 function determineWinner(userChoice, computerChoice) {
-    if (userChoice == computerChoice) {
+    let result = userChoice - computerChoice;
+    console.log('result: ' + result);
+    if (result == 0) {
         return 'DRAW';
     } else {
-        if (userChoice - computerChoice === 1 || userChoice - computerChoice === -2 ) {
+        if (result == 1 || result == -2 ) {
             document.getElementById('main').style.backgroundImage = "url('./confetti.gif')"
             return 'YOU WIN!';
         } else {
