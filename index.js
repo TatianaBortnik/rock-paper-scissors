@@ -26,7 +26,7 @@ function determineWinner(userChoice, computerChoice) {
     if (userChoice == computerChoice) {
         return 'DRAW';
     } else {
-        if (userChoice > computerChoice || userChoice==0 && computerChoice==2 ) {
+        if (userChoice > computerChoice || (userChoice===0 && computerChoice===2 )) {
             document.getElementById('main').style.backgroundImage = "url('./confetti.gif')"
             return 'YOU WIN!';
         } else {
